@@ -21,7 +21,7 @@ let level = 1;
 
 function setup() {
 
-    createCanvas(900, 800);
+    createCanvas(1200, 800);
     let time00 = 0;
     let time01 = -20;
     while (time01 < height) {
