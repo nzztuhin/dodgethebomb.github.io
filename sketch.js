@@ -21,7 +21,7 @@ let level = 1;
 
 function setup() {
 
-    createCanvas(1900, 800);
+    createCanvas(1000, 600);
     let time00 = 0;
     let time01 = -20;
     while (time01 < height) {
@@ -44,13 +44,13 @@ function setup() {
 
 function draw() {
     
-    background(0);
+    background("#2C2740");
     fill(239, 58, 38);
     rect(0, 0, zapperwidth, height);
     scoreUpdate();
     
 
-    fill(255, 127, 50);
+    fill("#F2561D");
 
 
     for (let i = 0; i < numofbombs; i++) {
@@ -59,7 +59,7 @@ function draw() {
     }
 
     updatebombspos();
-    fill(0, 255, 0);
+    fill("#03A696");
     ellipse(xpoint, ypoint, ball_diameter, ball_diameter);
     xpoint -= 3;
 
@@ -91,7 +91,7 @@ function initbobmpos() {
 }
 
 function gameover() {
-    fill(255);
+    fill("#F2EEAE");
     text('GAME OVER', 0.5 * width, 0.5 * height);
     noLoop();
 }
@@ -133,7 +133,7 @@ function bombCollisionTest() {
 function scoreUpdate() {
 
     let score = ceil(frameCount / 5);
-    fill(255);
+    fill("#F2EEAE");
     textSize(32);
     text("Score:", 8, 50);
     textSize(32);
